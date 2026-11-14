@@ -1,0 +1,12 @@
+### Is the server alive?
+# @name root
+GET http://localhost:8080/
+
+### List challenges
+# @name listChallenges
+GET http://localhost:8080/api/challenges
+Accept: application/json
+
+### Health check
+# @name health
+GET http://localhost:8080/actuator/health
