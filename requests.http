@@ -2,11 +2,28 @@
 # @name root
 GET http://localhost:8080/
 
+### Health check
+# @name health
+GET http://localhost:8080/actuator/health
+
 ### List challenges
 # @name listChallenges
 GET http://localhost:8080/api/challenges
 Accept: application/json
 
-### Health check
-# @name health
-GET http://localhost:8080/actuator/health
+### Get one challenge
+# @name getChallenge
+GET http://localhost:8080/api/challenges/1
+Accept: application/json
+
+### Challenge that doesn't exist
+# @name getMissing
+GET http://localhost:8080/api/challenges/67
+Accept: application/json
+
+### Bad id
+# @name getBadId
+GET http://localhost:8080/api/challenges/abc123
+Accept: application/json
+
+
