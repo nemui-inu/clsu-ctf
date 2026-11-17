@@ -31,4 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Resterm ###
 resterm.env.json
+
+### Environment Variables ###
+*.env
