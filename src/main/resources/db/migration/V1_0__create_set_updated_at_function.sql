@@ -1,0 +1,7 @@
+CREATE FUNCTION SET_UPDATED_AT()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at = now();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
